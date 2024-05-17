@@ -20,7 +20,7 @@ const ContactForm: React.FC = () => {
         <div>
             <Navbar />  
             <main className='pt-[200px]'>
-            <h1 className='text-center text-2xl text-gray-500 py-4 '>
+            <h1 className='text-center text-2xl text-gray-500 py-8 '>
             I’m excited to learn about your project. <br />Ready to get started?
             </h1>
         <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">

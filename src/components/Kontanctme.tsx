@@ -9,7 +9,7 @@ const Kontanctme: React.FC = () => {
                 <br />
                 I’ll buy the coffee.
             </p>
-            <button className="bg-gray-600 shadow-lg shadow-gray-500/50 inline-block bg-transparent border text-white py-3 px-8 rounded-full hover:bg-white hover:text-gray-900 transition duration-500 ease-in-out text-shadow mt-4 md:mt-0">
+            <button className="bg-cyan-700 shadow-lg shadow-gray-500/50 inline-block  border text-white py-3 px-8 rounded-full hover:bg-white hover:text-gray-900 transition duration-500 ease-in-out text-shadow mt-4 md:mt-0">
               
              
                 Let's do this
