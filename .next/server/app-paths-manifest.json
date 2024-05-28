@@ -1,7 +1,7 @@
 {
-  "/contactpage/page": "app/contactpage/page.js",
   "/page": "app/page.js",
-  "/home/page": "app/home/page.js",
+  "/api/contact/route": "app/api/contact/route.js",
+  "/contactpage/page": "app/contactpage/page.js",
   "/form/page": "app/form/page.js",
-  "/projects/page": "app/projects/page.js"
+  "/home/page": "app/home/page.js"
 }

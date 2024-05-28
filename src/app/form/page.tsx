@@ -1,7 +1,8 @@
-"use client"
+'use client';
 import Navbar from '@/components/Navbar';
 import React, { useState } from 'react';
 import { FaChevronDown } from 'react-icons/fa';
+import axios from 'axios';
 
 const ContactForm: React.FC = () => {
     const [name, setName] = useState('');
@@ -9,10 +10,42 @@ const ContactForm: React.FC = () => {
     const [message, setMessage] = useState('');
     const [projectType, setProjectType] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [error, setError] = useState('');
+    const [success, setSuccess] = useState('');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
+        setLoading(true);
+        setError('');
+        setSuccess('');
+
+        const formData = {
+            name,
+            email,
+            message,
+            projectType
+        };
+
+        try {
+            const response = await axios.post('/api/contact', formData);
+
+            if (response.status === 200) {
+                setSubmitted(true);
+                setName('');
+                setEmail('');
+                setMessage('');
+                setProjectType('');
+                setSuccess('Message sent successfully');
+            } else {
+                setError('Failed to submit form. Please try again.');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            setError('Failed to submit form. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
@@ -28,8 +61,7 @@ const ContactForm: React.FC = () => {
                         <p className="text-cyan-900">Your message has been sent successfully. We will get back to you soon.</p>
                     </div>
                 ) : (
-                    <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white shadow-lg shadow-gray-500/30 rounded-lg px-8 pt-6 pb-8 mb-4" data-netlify="true" name="contact">
-                        <input type="hidden" name="form-name" value="contact" />
+                    <form onSubmit={handleSubmit} className="max-w-md mx-auto bg-white shadow-lg shadow-gray-500/30 rounded-lg px-8 pt-6 pb-8 mb-4">
                         <div className="mb-4">
                             <label htmlFor="name" className="block text-cyan-900 text-sm font-bold mb-2">Name:</label>
                             <input
@@ -40,6 +72,7 @@ const ContactForm: React.FC = () => {
                                 onChange={(e) => setName(e.target.value)}
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-cyan-900 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="John Doe"
+                                required
                             />
                         </div>
                         <div className="mb-4">
@@ -52,6 +85,7 @@ const ContactForm: React.FC = () => {
                                 onChange={(e) => setEmail(e.target.value)}
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-cyan-900 leading-tight focus:outline-none focus:shadow-outline"
                                 placeholder="example@example.com"
+                                required
                             />
                         </div>
                         <div className="mb-4">
@@ -63,6 +97,7 @@ const ContactForm: React.FC = () => {
                                     value={projectType}
                                     onChange={(e) => setProjectType(e.target.value)}
                                     className="shadow appearance-none border rounded w-full py-2 px-3 text-cyan-900 leading-tight focus:outline-none focus:shadow-outline"
+                                    required
                                 >
                                     <option value="" disabled>Select a project type</option>
                                     <option value="responsive-design">Responsive Design</option>
@@ -81,13 +116,16 @@ const ContactForm: React.FC = () => {
                                 onChange={(e) => setMessage(e.target.value)}
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-cyan-900 leading-tight focus:outline-none focus:shadow-outline h-32"
                                 placeholder="Your message here"
+                                required
                             ></textarea>
                         </div>
                         <div className="flex items-center justify-between">
-                            <button type="submit" className="bg-cyan-700 hover:bg-white hover:text-gray-900 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-500 ease-in-out">
+                            <button type="submit" className="bg-cyan-700 hover:bg-white hover:text-gray-900 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:shadow-outline transition duration-500 ease-in-out" disabled={loading}>
                                 Submit
                             </button>
                         </div>
+                        {error && <p style={{ color: 'red' }}>{error}</p>}
+                        {success && <p style={{ color: 'green' }}>{success}</p>}
                     </form>
                 )}
             </main>
