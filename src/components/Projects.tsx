@@ -30,7 +30,7 @@ const projects: Project[] = [
   },
   {
     name: 'Din mægler',
-    description: 'A stylish e-commerce site that brings the latest fashion trends to your doorstep.',
+    description: 'Find your dream home and the best real estate agents all in one place. Make your home search easy with Din Mægler.',
     image: '/dinmeagler.jpg',
     link: '/fashion-site',
     videoId: '946151411'
@@ -72,7 +72,7 @@ const Projects: React.FC = () => {
   };
 
   return (
-    <div className="text-center mt-20 mb-20 mx-auto md:mx-10 lg:mx-20">
+    <div className="text-center  p-4 mt-20 mb-20 mx-auto md:mx-10  lg:mx-20">
     <h1 className="text-4xl font-bold text-gray-800 mb-10">My Recent Work</h1>
     <p className="text-lg text-gray-600 mb-10">Here are a few past design projects I've worked on. Want to see more? <Link href="mailto:osradk@gmail.com"><span className="text-blue-600 hover:text-blue-700 underline">Email me</span></Link>.</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

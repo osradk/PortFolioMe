@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import { useEffect } from 'react';
 import Projects from '@/components/Projects';
-import contact from '@/app/pages/contact/page';
+import Contact from '@/app/contact/page';
 
 
 
@@ -40,10 +40,9 @@ const Home: NextPage = () => {
 
   return (
     <div>
-    <div className="relative flex flex-col items-center justify-center bg-gradient-to-r from-gray-800 to-gray-900 min-h-screen overflow-hidden">
-      <Navbar />
-      <div className="container mx-auto px-4 pt-[100px] flex flex-col md:flex-row items-center">
-        <div className="md:w-1/2 text-center md:text-left animate-fadeInLeft">
+<div className="relative p-8 flex flex-col items-center justify-center bg-gradient-to-b from-gray-900 via-gray-700 to-gray-0 min-h-screen overflow-hidden">    {/* Dit indhold her */}      <Navbar />
+      <div className="container mx-auto px-4 pt-[100px] flex flex-col md:flex-row justify-center items-center">
+        <div className=" md:w-1/3 text-center md:text-left animate-fadeInLeft">
           <div className="inline-block overflow-hidden relative w-64 h-64 rounded-full mx-auto md:mx-0">
           <Image 
   src="/billede.jpg" 
@@ -56,7 +55,7 @@ const Home: NextPage = () => {
           <h1 className="text-2xl md:text-3xl lg:text-4xl  mt-6 text-white">Who am I?</h1>
           <p className="text-sm md:text-lg lg:text-xl mt-2 text-white">A passionate web developer with expertise in creating engaging and efficient digital solutions.</p>
         </div>
-        <div className="md:w-1/2 mt-6 md:mt-0 animate-fadeInRight">
+        <div className="md:w-1/3 mt-6 md:mt-0 animate-fadeInRight">
           <div className=" flex flex-wrap justify-center gap-2 animate-popIn">
           {skills.map((skill, index) => (
   <div key={index} className="w-2/3 md:w-1/2 lg:w-1/3 px-4 mb-1">
@@ -71,7 +70,9 @@ const Home: NextPage = () => {
       </div>
     </div>
     <Projects />
-
+<div>
+<Contact/>
+</div>
     </div>
   );
 };
