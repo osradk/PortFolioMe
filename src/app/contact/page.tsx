@@ -23,7 +23,9 @@ const Footer: React.FC = () => {
                 </div>
                 <div className="flex justify-center items-center pt-4 pb-8 text-2xl">
                     <h1 className='text-cyan-700 text-center leading-relaxed'>
-                        Living, learning, & leveling up <br />one day at a time.
+                    Creating, growing, & thriving <br />
+                    one step at a time.
+                       
                     </h1>
                 </div>
                 <ul className="flex justify-center space-x-4 mt-4">

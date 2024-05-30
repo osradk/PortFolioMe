@@ -53,7 +53,7 @@ const Home: NextPage = () => {
 />
           </div>
           <h1 className="text-2xl md:text-3xl lg:text-4xl  mt-6 text-white">Who am I?</h1>
-          <p className="text-sm md:text-lg lg:text-xl mt-2 text-white">A passionate web developer with expertise in creating engaging and efficient digital solutions.</p>
+          <p className="text-sm md:text-lg lg:text-xl mt-2 text-white">A web developer dedicated to building user-friendly and efficient digital solutions</p>
         </div>
         <div className="md:w-1/3 mt-6 md:mt-0 animate-fadeInRight">
           <div className=" flex flex-wrap justify-center gap-2 animate-popIn">
