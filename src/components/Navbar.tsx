@@ -6,7 +6,7 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-800 to-gray-900 text-white py-2 px-4 shadow-lg shadow-cyan-500/50 rounded-t-none rounded-bl-lg rounded-br-lg">
       <div className="container mx-auto flex justify-between items-center">
-        <Link href="/">
+        <Link href="/home">
           <span>
             <Image
               src="/osraaa.png"
