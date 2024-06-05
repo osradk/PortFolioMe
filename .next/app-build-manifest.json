@@ -16,20 +16,10 @@
       "static/chunks/main-app.js",
       "static/chunks/app/home/page.js"
     ],
-    "/projects/page": [
+    "/_not-found/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/projects/page.js"
-    ],
-    "/contactpage/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contactpage/page.js"
-    ],
-    "/form/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/form/page.js"
+      "static/chunks/app/_not-found/page.js"
     ]
   }
 }

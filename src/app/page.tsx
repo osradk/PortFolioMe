@@ -4,6 +4,7 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import { useEffect } from 'react';
 
+
 const WelcomePage: NextPage = () => {
   useEffect(() => {
     const styleSheet = document.styleSheets[0];
