@@ -14,13 +14,13 @@ const Home: NextPage = () => {
     { name: 'HTML/CSS', level: 90 },
     { name: 'JavaScript', level: 85 },
     { name: 'React.js', level: 80 },
-    { name: 'Node.js', level: 25 },
-    { name: 'REST APIs', level: 80 },
-    { name: 'Git & GitHub', level: 85 },
-    { name: 'Webpack', level: 70 },
-    { name: 'TypeScript', level: 30 },
-    { name: 'Next.js', level: 90 },
+    { name: 'Next.js', level: 80 },
     { name: 'Tailwind CSS', level: 85 },
+    { name: 'TypeScript', level: 50 }, // Øg niveauet hvis muligt
+    { name: 'Responsive Design', level: 90 },
+    { name: 'Git & GitHub', level: 85 },
+    { name: 'Node.js', level: 50 }, // Øg niveauet hvis muligt
+    { name: 'GraphQL', level: 40 } // Tilføjet ny færdighed
   ];
 
   useEffect(() => {
