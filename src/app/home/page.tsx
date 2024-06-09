@@ -17,7 +17,7 @@ const Home: NextPage = () => {
     { name: 'Next.js', level: 80 },
     { name: 'Tailwind CSS', level: 85 },
     { name: 'TypeScript', level: 50 }, // Øg niveauet hvis muligt
-    { name: 'Responsive Design', level: 90 },
+    { name: 'RWD', level: 90 },
     { name: 'Git & GitHub', level: 85 },
     { name: 'Node.js', level: 50 }, // Øg niveauet hvis muligt
     { name: 'GraphQL', level: 40 } // Tilføjet ny færdighed
