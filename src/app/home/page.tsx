@@ -45,12 +45,15 @@ const Home: NextPage = () => {
         <div className=" md:w-1/3 text-center md:text-left animate-fadeInLeft">
           <div className="inline-block overflow-hidden relative w-64 h-64 rounded-full mx-auto md:mx-0">
           <Image 
-  src="/im.jpg" 
-  alt="Profile Picture of Osra Almousavi"
-  layout="fill" 
-  objectFit="cover" 
-  className="rounded-full img-shadow"
-/>
+                src="/im.jpg" 
+                alt="Profile Picture of Osra Almousavi"
+                layout="fill" 
+                objectFit="cover" 
+                className="rounded-full img-shadow"
+                priority // Tilføjet for at give billedet høj prioritet ved indlæsning
+                placeholder="blur" // Brug af blur placeholder
+                blurDataURL="/im-blur.jpg" // Lavopløst version af billedet
+              />
           </div>
           <h1 className="text-2xl md:text-3xl lg:text-4xl  mt-6 text-white">Who am I?</h1>
           <p className="text-sm md:text-lg lg:text-xl mt-2 text-white">A web developer dedicated to building user-friendly and efficient digital solutions</p>
