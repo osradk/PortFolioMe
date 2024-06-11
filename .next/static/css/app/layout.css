@@ -1123,6 +1123,11 @@ html {
   color: rgb(202 138 4 / var(--tw-text-opacity));
 }
 
+.hover\:text-\[\#d6ae57\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(214 174 87 / var(--tw-text-opacity));
+}
+
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;

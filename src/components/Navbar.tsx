@@ -19,10 +19,10 @@ const Navbar = () => {
         <div>
        
           <Link href="/projects">
-            <span className="mr-4 cursor-pointer hover:bg-[#d6ae57] transition-colors">Projects</span>
+            <span className="mr-4 cursor-pointer hover:text-[#d6ae57] transition-colors">Projects</span>
           </Link>
           <Link href="/contactpage">
-            <span className="cursor-pointer hover:bg-[#d6ae57]  transition-colors">Contact</span>
+            <span className="cursor-pointer hover:text-[#d6ae57] transition-colors">Contact</span>
           </Link>
         </div>
       </div>
