@@ -45,7 +45,7 @@ const Home: NextPage = () => {
         <div className=" md:w-1/3 text-center md:text-left animate-fadeInLeft">
           <div className="inline-block overflow-hidden relative w-64 h-64 rounded-full mx-auto md:mx-0">
           <Image 
-                src="/im.jpg" 
+                src="/im.webp" 
                 alt="Profile Picture of Osra Almousavi"
                 layout="fill" 
                 objectFit="cover" 
