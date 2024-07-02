@@ -20,7 +20,7 @@ const Home: NextPage = () => {
     { name: 'Responsive', level: 90 },
     { name: 'Git & GitHub', level: 85 },
     { name: 'Node.js', level: 50 }, // Øg niveauet hvis muligt
-    { name: 'GraphQL', level: 40 } // Tilføjet ny færdighed
+    { name: 'SQL', level: 40 } // Tilføjet ny færdighed
   ];
 
   useEffect(() => {
